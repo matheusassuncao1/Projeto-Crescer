@@ -1,0 +1,85 @@
+body {
+    min-height: 100vh;
+    min-width: 100vh;
+    background-color: #12181f;
+    color: white;
+  }
+  
+  h1 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 50px;
+  }
+  
+  p {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+  }
+  
+  .actions {
+      display: flex;
+      justify-content: center;
+  }
+  
+  .actions button {
+      padding: 8px 16px;
+      font-size: 30px;
+      border-radius: 10px;
+      background-color: #27ae60;
+      color: white;
+  }
+  
+  .grid-container {
+    display: grid;
+    justify-content: center;
+    grid-gap: 16px;
+    grid-template-columns: repeat(6, 140px);
+    grid-template-rows: repeat(2, calc(140px / 2 * 3));
+  }
+  
+  .card {
+    height: calc(140px / 2 * 3);
+    width: 140px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .front-image {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .front, .back {
+      backface-visibility: hidden;
+      position: absolute;
+      border-radius: 10px;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+  }
+  
+  .card .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card .back {
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(4) rotate(65)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(226,12.8%,38.2%,1)'/><path d='M10 0L0 10v10l10-10 10 10V10zm10 20v10l10-10 10 10V20L30 10z'  stroke-width='1' stroke='none' fill='hsla(167,39.8%,81.8%,1)'/><path d='M10-20L0-10V0l10-10L20 0v-10L10-20zM20 0v10L30 0l10 10V0L30-10 20 0zM10 20L0 30v10l10-10 10 10V30L10 20zm10 20v10l10-10 10 10V40L30 30 20 40z'  stroke-width='1' stroke='none' fill='hsla(177,19.8%,61.4%,1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    background-position: center center;
+    background-size: cover;
+    backface-visibility: hidden;
+  }
+  
+  .card .front {
+    transform: rotateY(180deg);
+  }
