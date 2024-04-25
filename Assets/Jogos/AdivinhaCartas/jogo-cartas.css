@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #efd6ac;
+}
+
+.wrapper {
+  box-sizing: content-box;
+  width: 429px;
+  padding: 40px 48px;
+  background-color: #ffffff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 9.6px;
+  box-shadow: 0 21.6px 67.2px rgba(86, 66, 0, 0.2);
+}
+
+.game-container {
+  position: relative;
+  width: 100%;
+  display: grid;
+  gap: 9.6px;
+}
+
+.stats-container {
+  text-align: right;
+  margin-bottom: 19.2px;
+}
+
+.stats-container span {
+  font-weight: 600;
+}
+
+.card-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.card-before,
+.card-after {
+  position: absolute;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #000000;
+  transition: transform 0.7s ease-out;
+  backface-visibility: hidden;
+}
+
+.card-before {
+  background-color: #f4c531;
+  font-size: 44.8px;
+  font-weight: 600;
+}
+
+.card-after {
+  background-color: #ffffff;
+  transform: rotateY(180deg);
+}
+
+.card-container.flipped .card-before {
+  transform: rotateY(180deg);
+}
+
+.card-container.flipped .card-after {
+  transform: rotateY(0deg);
+}
+
+.controls-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #EFD6AC;
+  top: 0;
+}
+
+button {
+  border: none;
+  border-radius: 4.8px;
+  padding: 16px 24px;
+  cursor: pointer;
+}
+
+#stop {
+  font-size: 17.6px;
+  display: block;
+  margin: 17.6px auto 0 auto;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.controls-container button {
+  font-size: 22.4px;
+  box-shadow: 0 12px 40px rgba(86, 66, 0, 0.2);
+}
+
+.hide {
+  display: none;
+}
+
+#result {
+  text-align: center;
+}
+
+#result h2 {
+  font-size: 40px;
+}
+
+#result h4 {
+  font-size: 28.8px;
+  margin: 14.4px 0 24px 0;
+}
